@@ -1,0 +1,54 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Pacifico&display=swap');
+#El_chef{
+    width: 200px;
+}
+h1{
+    font-family: 'Pacifico', cursive;
+    color: black;
+    margin: 5px;
+    padding: 0px;
+    font-size: 80px;
+    text-align: center;
+}
+
+nav {display: flex;
+    justify-content: space-around;
+    background-color: #c9ada7;
+    width: 50vw;
+    
+
+}
+#Navegacion{
+    display: flex;
+}
+li{
+    display: flex;
+    align-items: center;
+    margin-left:60px;
+    list-style-type: none;
+}
+a{
+    font-family: 'Lora', serif;
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 15%;
+    background-color: #f2e9e4;
+    
+}
+a:hover{
+    background-color: #997b66;
+    color: azure;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f2e9e4;
+    
+}
+.iconos{
+    width: 25px;
+    margin: 5px;
+}
