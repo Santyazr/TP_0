@@ -1,5 +1,5 @@
 .galeria{
-  margin: 60px auto;
+  margin: 40px auto;
   background-color: #fff;
 }
 
@@ -25,7 +25,7 @@
   display: grid;
   grid-template-columns: repeat(4,1fr);
   gap: 10px;
-  padding: 40px ;
+  padding: 40px  40px 20px;
 
 }
 
@@ -115,6 +115,16 @@
 }
 
 @media (max-width:767px){
+  .galeria-item {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .light-box img {
+    width: 85vw;
+    max-height: 100vh;
+    object-fit: cover;
+  
+  }
   .galeria h2{
     font-size: 25px;
   }
@@ -126,7 +136,6 @@
 
 
 @media (max-width:375px){
-
   .close{
     top: 40px;
     right: 20px;
