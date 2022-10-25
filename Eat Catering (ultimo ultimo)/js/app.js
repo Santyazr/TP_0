@@ -1,5 +1,7 @@
+
+/*api*/
 const contenedor_cocktel = document.getElementsByClassName("menu-text2").item(0)
-const contenedor_menu = document.getElementsByClassName("menus").item(0)
+const contenedor_menu = document.getElementsByClassName("cock").item(0)
 fetch("https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail")
           .then((res) => res.json())
           .then((json) => {
@@ -28,7 +30,7 @@ fetch("https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail")
           })
           .catch(err => console.log(err))
 
-
+/*menu*/
 
 const menu = document.querySelector(".menu");
 const AbrirMenuBtn = document.querySelector(".abrir-menu");
