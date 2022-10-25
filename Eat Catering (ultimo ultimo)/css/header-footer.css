@@ -25,7 +25,6 @@ section [id]{
 body{
   font-family: 'Josefin Sans', sans-serif;
   line-height: 1.5;
-
   /* background-color: rgb(39, 38, 38); */
 }
 
@@ -46,13 +45,11 @@ li{
 /*header*/
 
 .header {
-  height: 100vh;
+  height:100vh;
   left: 0;
   top: 0;
   width: 100%;
   z-index: 100;
-  background: rgb(0,0,0);
-  background: linear-gradient(132deg, rgba(0,0,0,0.9136029411764706) 18%, rgba(0,0,0,0) 100%);
   display:grid;
   grid-template-rows: max-content 1fr;
 }
@@ -65,15 +62,12 @@ li{
   padding: 20px  0;
 }
 
-/* Logo */
-
 
 .logo img {
   width: 120px;
   object-fit: cover;
 }
 
-/* Menu */
 .menu {
   display: flex;
   list-style: none;
@@ -85,6 +79,7 @@ li{
 }
 
 .menu a {
+   text-shadow: 2px 2px 2px rgba(0,0,0,0.6);
   color: #fff;
   font-size: 16px;
   font-weight: 400;
@@ -92,7 +87,7 @@ li{
   position: relative;
 }
 
-.menu a::after { /*animacion de menu*/
+.menu a::after {
   content: "";
   background-color: #f45654;
   position: absolute;
@@ -105,7 +100,6 @@ li{
 
 .menu a:hover::after {
   width: 100%;
-  
 }
 
 .abrir-menu,
@@ -114,6 +108,9 @@ li{
 }
 
 @media (min-width:768px) and (max-width:1023px){
+  .header {
+    height:90vh;
+  }
 
   .logo img {
     width: 90px;
@@ -217,12 +214,14 @@ video {
  }
 
 .titulo1 {
+  text-shadow: 4px 4px 2px rgba(0,0,0,0.6);
   font-family: var(--fuente-texto);
   font-size: 22px;
   color: #fff;
 }
 
 .titulo1 p{
+  text-shadow: 2px 2px 2px rgba(0,0,0,0.6);
   font-family: var(--fuente-texto);
   font-size: 24px;
   font-weight: 300;
@@ -230,6 +229,7 @@ video {
 
 
 .inicio a {
+  text-shadow: 2px 2px 2px rgba(0,0,0,0.6);
   color: white;
   text-decoration: none;
   font-size: 14px;
@@ -250,6 +250,7 @@ position: absolute;
   text-align: center;
 }
 .boton-bajar a{
+  text-shadow: 2px 2px 2px rgba(0,0,0,0.6);
   color: white;
   font-size: 12px;
   transition: all 0.5s ease-in-out;
@@ -261,6 +262,13 @@ position: absolute;
 
 
 @media (min-width: 768px) and (max-width: 1023px){
+
+  video {
+    width: 100%;
+    height: 90vh;
+    object-fit: cover;
+  }
+
 
 .inicio {
   gap: 0.7rem;
@@ -332,89 +340,25 @@ footer {
 .footer {
   width: 90%;
   padding: 30px 10px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  justify-content: center;
-}
-
-.eat-info {
-  padding: 0 20px;
-  display: flex;
+  display:flex;
   flex-direction: column;
-  gap: 1rem;
-  color: white;
-}
-
-.eat-info img {
-  object-fit: cover;
-  width: 120px;
-}
-
-.eat-info p {
-  font-family:var(--fuente-parrafos);
-  font-size: 13px;
-  letter-spacing: 1px;
-  font-weight: 300;
-  padding-right: 40px;
-}
-
-.enlaces-footer {
-  display: flex;
-  align-items: flex-end;
-  flex-direction: column;
-  gap: 0.7rem;
-  text-transform: uppercase;
-  padding: 7px 20px 0;
-  color: var(--color-titulo);
-  font-size: 15px;
-  font-weight: 600;
-}
-
-.enlaces-footer a {
-  color: white;
-  font-size: 13px;
-  font-weight: 300;
-  font-family:var(--fuente-parrafos);
-
-}
-
-.enlaces-footer a:hover {
-  color: var(--color-titulo);
-  font-weight: 600;
-}
-
-.contacto-footer {
-  color: var(--color-titulo);
-  font-size: 15px;
-  font-weight: 600;
-  padding: 7px 20px 0;
-  display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: space-between;
-  gap: 0.7rem;
-  text-align: center;
-  
+  gap: 1rem;
 }
 
 
-
-.contacto_list a {
-  color: white;
-  font-family: var(--fuente-texto);
-  font-size: 14px;
-  font-weight: 300;
-  padding: 0 5px;
-  letter-spacing: 1px;
-  font-family:var(--fuente-parrafos);
-
+.logo-footer img{
+ width: 120px;
 }
 
-
-.contacto-footer i {
-  color: var(--color-titulo);
-  font-size: 14px;
-  padding: 10px 0;
+.contacto_list {
+ color: #fff;
+ text-transform: uppercase;
+ font-weight: lighter;
+ font-size: 12px;
+ letter-spacing: 2px;
+ text-align: center;
 }
 
 
@@ -428,7 +372,7 @@ footer {
 .social_media a {
   border-radius: 10px;
   background-color: transparent;
-  padding:  0 15px;
+  padding:  5px 15px;
   transition: all 0.3s ease-in;
 }
 
@@ -446,7 +390,7 @@ footer {
 
 .social_media i {
   color: white;
-  font-size: 13px;
+  font-size: 15px;
   
 }
 
@@ -459,121 +403,25 @@ footer {
   padding: 5px;
 }
 
-@media (min-width: 768px) and (max-width: 1023px){
-    
-  .eat-info {
-    padding: 0 10px;
-    gap: 0.5rem;
-  }
-  
-  .eat-info img {
-    width: 100px;
-  }
-  
-  .eat-info p {
-    font-size: 12px;
-    padding-right: 5px;
-  }
-  
-  .enlaces-footer {
-    padding: 7px 5px 0;
-    font-size: 14px;
-  }
- 
-  .contacto-footer {
-    
-    padding: 7px 5px 0;
-  }
-
-  .contacto-footer a {
-    font-size: 14px;
-    padding: 7px 5px 0;
-  }
-}
 
 
+/*---boton ir arriba-----*/
 
-@media (max-width:767px) {
-  .footer {
-    padding: 30px ;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-
-  .eat-info {
-    align-items: center;
-  }
-
-
-  .eat-info p {
-    text-align: center;
-    padding: 0 50px;
-  }
-
-  .enlaces-footer {
-    align-items: center;
-    padding-bottom: 15px;
-  }
-
-  .social_media {
-    justify-content: center;
-  }
-
-
-  .contacto_list a {
-    font-size: 14px;
-  }
-
-  .contacto-footer i {
-    font-size: 15px;
-  }
-
-  .text-footer {
-    font-size: 12px;
-  }
-
-
-  .enlaces-footer {
-    padding: 7px 5px 0;
-    font-size: 14px;
-  }
- 
-  .contacto-footer {
-    
-    padding: 7px 0px 0;
-  }
-
-  .contacto-footer a {
-    font-size: 14px;
-    padding: 7px 0px 0;
-  }
-}
-
-
-
-
-.ir-arriba{
-  width: 30px;
+.btnTop {
   position: fixed;
-  bottom: 0;
-  right: 0;
-  background-color: #fff;
-  margin-right: 15px;
-  margin-bottom: 30px;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px;
+  background:#333333;
+  color: #fff;
+  border: none;
   border-radius: 100%;
-  padding: 2px;
-  text-align: center;
-  box-shadow: 1px 1px 5px 2px rgba(0,0,0,0.3);
-  scroll-margin: top;
+  cursor: pointer;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+  transform: translateY(100px);
+  transition: 0.5s;
 }
 
-.ir-arriba i{
-  color: var(--color-oscuro);
-  font-size: 13px;
+.btnTop-on {
+  transform: translateY(0);
 }
-
-.ir-arriba:hover{
-  background-color: var(--color-letrasoscuras);
-  
-} 
